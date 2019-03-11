@@ -11,6 +11,7 @@ pinA0 = 'A0';
   i = 1;
   figure;
    while time > 0
+      % "Read" voltage fromt analog port A0
       voltage(i) = readVoltage(a_mega, pinA0);
       time = time - 1;
 
