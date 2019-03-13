@@ -8,5 +8,6 @@ Matlab folder:
 - Led blinking
 - Joystick
 - Potetiometer
+- Buzzer
 
 Simulink folder:
