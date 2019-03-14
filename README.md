@@ -10,4 +10,6 @@ Matlab folder:
 - Potetiometer
 - Buzzer
 
-Simulink folder:
+Simulink folder (see config.png):
+- Blinking
+- RGB (wheel)
