@@ -1,5 +1,8 @@
-
 %% This script is executed when the simulink play button is pressed
+
+%%-------------------------------
+    SIM_TIME = inf;
+%%-------------------------------
 
 PWM_AMPLITUDE = 125;
 PHASE_DELAY_R = 0;
