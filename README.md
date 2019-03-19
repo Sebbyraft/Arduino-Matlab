@@ -13,3 +13,5 @@ Matlab folder:
 Simulink folder (see config.png):
 - Blinking
 - RGB (wheel)
+- RGB (switch)
+- PWM (fading led)
