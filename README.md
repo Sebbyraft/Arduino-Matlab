@@ -15,3 +15,4 @@ Simulink folder (see config.png):
 - RGB (wheel)
 - RGB (switch)
 - PWM (fading led)
+- LED (button, fading)
