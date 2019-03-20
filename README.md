@@ -16,3 +16,4 @@ Simulink folder (see config.png):
 - RGB (switch)
 - PWM (fading led)
 - LED (button, fading)
+- Joystick
