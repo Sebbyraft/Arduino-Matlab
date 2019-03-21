@@ -17,3 +17,6 @@ Simulink folder (see config.png):
 - PWM (fading led)
 - LED (button, fading)
 - Joystick
+- Button
+- Potentiometer
+- RC Filter
