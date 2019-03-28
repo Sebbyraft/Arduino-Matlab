@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'RC_filter'. 
 ## 
 ## Makefile     : RC_filter.mk
-## Generated on : Thu Mar 21 10:49:22 2019
+## Generated on : Thu Mar 28 10:48:40 2019
 ##  version:  
 ## 
 ## Build Info:
@@ -232,7 +232,7 @@ BUILD_TYPE = "Top-Level Standalone Executable"
 ## INCLUDE PATHS
 ###########################################################################
 
-INCLUDES_BUILDINFO = -I$(START_DIR) -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/shared/svd/include -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinobase/include -I$(START_DIR)/RC_filter_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/mega -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinotarget/include -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinotarget/scheduler/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/shared/externalmode_daemon/include
+INCLUDES_BUILDINFO = -I$(START_DIR) -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/shared/svd/include -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinobase/include -I$(START_DIR)/RC_filter_ert_rtw -I$(MATLAB_ROOT)/extern/include -I$(MATLAB_ROOT)/simulink/include -I$(MATLAB_ROOT)/rtw/c/src -I$(MATLAB_ROOT)/rtw/c/src/ext_mode/common -I$(MATLAB_ROOT)/rtw/c/ert -I$(MATLAB_ROOT)/toolbox/coder/rtiostream/src/utils -I$(ARDUINO_ROOT)/hardware/arduino/avr/cores/arduino -I$(ARDUINO_ROOT)/hardware/arduino/avr/variants/eightanaloginputs -I$(ARDUINO_ROOT)/libraries/Servo/src -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinotarget/include -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/supportpackages/arduinotarget/scheduler/include -I$(ARDUINO_ROOT)/hardware/tools/avr/avr/include/avr -I/Users/alessandrosebastianelli/Documents/MATLAB/SupportPackages/R2018b/toolbox/target/shared/externalmode_daemon/include
 
 INCLUDES = $(INCLUDES_BUILDINFO)
 
@@ -240,7 +240,7 @@ INCLUDES = $(INCLUDES_BUILDINFO)
 ## DEFINES
 ###########################################################################
 
-DEFINES_ = -DMODEL=RC_filter -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DEXT_MODE=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DMW_TIMERID=5 -DMW_PRESCALAR=256 -DMW_TIMERCOUNT=64911 -DMW_SCHEDULERCOUNTER=1 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_BAUDRATE_SERIAL1_=9600 -D_RTT_BAUDRATE_SERIAL2_=9600 -D_RTT_BAUDRATE_SERIAL3_=9600 -D_RTT_ANALOG_REF_=0
+DEFINES_ = -DMODEL=RC_filter -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0 -DUNIX -DON_TARGET_WAIT_FOR_START=1 -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTID01EQ=0 -DEXT_MODE=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0 -DEXIT_FAILURE=1 -DEXTMODE_DISABLEPRINTF -DEXTMODE_DISABLETESTING -DEXTMODE_DISABLE_ARGS_PROCESSING=1 -DSTACK_SIZE=64 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DRT -DMW_TIMERID=1 -DMW_PRESCALAR=256 -DMW_TIMERCOUNT=64911 -DMW_SCHEDULERCOUNTER=1 -D_RTT_BAUDRATE_SERIAL0_=9600 -D_RTT_ANALOG_REF_=0
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DEXT_MODE=1 -DONESTEPFCN=1 -DTERMFCN=1 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_IMPLIED = -DTID01EQ=0
 DEFINES_OPTS = -DON_TARGET_WAIT_FOR_START=1
@@ -295,7 +295,7 @@ SYSTEM_LIBS =
 # C Compiler
 #---------------
 
-CFLAGS_SKIPFORSIL = -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -D_RUNONTARGETHARDWARE_BUILD_ -D_ROTH_MEGA2560_
+CFLAGS_SKIPFORSIL = -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -D_RUNONTARGETHARDWARE_BUILD_
 CFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
@@ -304,7 +304,7 @@ CFLAGS += $(CFLAGS_SKIPFORSIL) $(CFLAGS_BASIC)
 # C++ Compiler
 #-----------------
 
-CPPFLAGS_SKIPFORSIL = -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -D_RUNONTARGETHARDWARE_BUILD_ -D_ROTH_MEGA2560_
+CPPFLAGS_SKIPFORSIL = -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -D_RUNONTARGETHARDWARE_BUILD_
 CPPFLAGS_BASIC = $(DEFINES) $(INCLUDES)
 
 CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
@@ -313,7 +313,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mmcu=atmega2560 
+CPP_LDFLAGS_SKIPFORSIL = -mmcu=atmega328p 
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -321,7 +321,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mmcu=atmega2560 
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mmcu=atmega328p 
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -329,7 +329,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mmcu=atmega2560 
+LDFLAGS_SKIPFORSIL = -mmcu=atmega328p 
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -337,7 +337,7 @@ LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mmcu=atmega2560 
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mmcu=atmega328p 
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
