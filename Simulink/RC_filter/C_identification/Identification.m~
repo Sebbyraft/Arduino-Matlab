@@ -18,6 +18,7 @@ for i=1:length(C_vec)
     % Start simulation
     sim(model);
     sim_out(i,:) = square_error;
+    Square_Error(R, C);
     plot(square_error, 'LineWidth', 2); hold on;
 end
 
