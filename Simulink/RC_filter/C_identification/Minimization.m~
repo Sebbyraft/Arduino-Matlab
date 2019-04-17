@@ -1,4 +1,0 @@
-
-R = 10.09*10^3;
-f = @(x)Get_Square_Error(R,x);
-

@@ -1,13 +1,10 @@
 %% First of all
 % 1) Run RC_filter.slx
-% 2) Run RC_filter_simulation.slx
+% 2) Run RC_filter_system.slx
 % then run this script
 
 %% Plot
 figure;
-voltage_capacitor_s = timeseries(voltage_capacitor, time);
-voltage_resistor_s = timeseries(voltage_resistor, time);
-
 plot(voltage_capacitor_s, 'LineWidth', 2); hold on;
 plot(voltage_resistor_s, 'LineWidth', 2); hold on;
 title("RC Filter (Real system)", 'FontSize', 20);

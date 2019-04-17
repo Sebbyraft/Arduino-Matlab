@@ -1,13 +1,17 @@
 close all;
+clear all;
 %% Load data
-load('test_002.mat');
+load('test_003.mat');
 in = timeseries(voltage_resistor, time);
 out_1 = timeseries(voltage_capacitor, time);
 
 %% Parameters
-R = 10.09*10^3;
-C_vec = 80e-6:1e-6:120e-6;
+R = 10.19*10^3;
+% 100 uF capacitor
+% C_vec = 80e-6:1e-6:120e-6;
 
+% 10 uF capacitor
+C_vec = 10e-9:1e-6:100e-6;
 %% Simulink model
 model = 'C_identification';
 figure;

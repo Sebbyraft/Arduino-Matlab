@@ -1,8 +1,12 @@
-function [SQ_ERR] = Get_Square_Error(R,C)
-    model = 'C_identification';
-    tau = R*C;
+function [f] = Get_Square_Error(x)
+    R = 10.19*10^3
+    %% Simulation
+    model = 'C_identification'
+    %% Load parameters
+    tau = R*x
     % Start simulation
     sim(model);
-    SQ_ERR = square_error(end);
+    f = sq(end);
+    clear model
+    
 end
-
