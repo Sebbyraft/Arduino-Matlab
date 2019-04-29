@@ -1,4 +1,4 @@
-clear all; clc; close all;
+   clear all; clc; close all;
 
 tau = 0;
 % 100 uF capacitor
@@ -6,8 +6,9 @@ tau = 0;
 
 % 10 uF capacitor
 f = @Get_Square_Error
-options = optimset('PlotFcns',@optimplotfval,'TolX', 0.00000000001);
-x = fminbnd(f, 9.8e-6, 10.2e-6, options);
+%options = optimset('PlotFcns',@optimplotfval,'TolX', 0.0001);
+options = optimset();
+x = fminbnd(f, 93e-6, 100e-6, options);
 
 display('Capacitor Value');
 x

@@ -1,0 +1,55 @@
+close all; clc;
+% figure(1);
+% figure(2);
+
+
+fftc = ffts_c(:, [2:100]);
+fftr = ffts_r(:, [2:100]);
+
+figure,
+for i=1:length(periods)
+     plot(fftr(i,:));hold on;
+end
+
+for i=1:length(periods)
+    mc(i) = max(fftc(i,:));
+    mr(i) = max(fftr(i,:));
+    
+    g_s(i) =  20*log10(abs(mc(i)./mr(i)));
+end    
+
+figure,
+plot(g_s);
+
+figure,
+
+%% Bode
+tau = 1;
+
+NUM = [1];
+DEN = [tau 1];
+
+G = tf(NUM, DEN);
+
+[mag,phase,wout] = bode(G);                    
+mag = squeeze(mag);                                             
+phase= squeeze(phase);
+magr2 = (mag/max(mag)).^2;                                     
+dB3 = interp1(magr2, [wout phase mag], 0.5, 'spline');
+figure,
+subplot(2,1,1);
+semilogx(wout, 20*log10(mag), '-b',  dB3(1), 20*log10(dB3(3)), '+r', 'MarkerSize',10); hold on;
+title('Bode Diagram');
+ylabel('Magnitude (dB)');
+grid on;
+plot(g_s, '*'), hold on;
+
+
+
+subplot(2,1,2);
+semilogx(wout, phase, '-b',  dB3(1), dB3(2), '+r', 'MarkerSize',10)
+ylabel('Phase (deg)');
+xlabel('Frequency (rad/s)');
+grid on;
+set(findall(gcf,'type','line'),'linewidth',2)
+set(findall(gcf,'type','text'),'FontSize',20)

@@ -1,9 +1,9 @@
 close all;
 clear all;
 %% Load data
-load('test_003.mat');
-in = timeseries(voltage_resistor, time);
-out_1 = timeseries(voltage_capacitor, time);
+load('test_002.mat');
+measured_input = timeseries(voltage_resistor, time);
+measured_capacitor_voltage = timeseries(voltage_capacitor, time);
 
 %% Parameters
 R = 10.19*10^3;
@@ -11,7 +11,7 @@ R = 10.19*10^3;
 % C_vec = 80e-6:1e-6:120e-6;
 
 % 10 uF capacitor
-C_vec = 10e-9:1e-6:100e-6;
+C_vec = 70e-6:1e-6:150e-6;
 %% Simulink model
 model = 'C_identification';
 figure;
@@ -22,8 +22,13 @@ for i=1:length(C_vec)
     % Start simulation
     sim(model);
     sim_out(i,:) = square_error;
-    plot(square_error, 'LineWidth', 2); hold on;
+    plot(time2, square_error, 'LineWidth', 2); hold on;
 end
+title("Square Errors", 'FontSize', 20);
+xlabel("Time [s]", 'FontSize',16);
+ylabel("Square Error [V]", 'FontSize',16);
+grid on;
+
 
 to_min = sim_out(:,end);
 
@@ -35,12 +40,14 @@ Square_Error = sim_out(i,end)
 
 figure,
 plot(to_min, 'LineWidth', 2); grid on;
-
+title("Square Error (Minimization)", 'FontSize', 20);
+xlabel("N^\circ Test", 'FontSize',16);
+ylabel("Square Error [V]", 'FontSize',16);
 %% Final simulation
-tau = R*C;
-sim(model);
-figure,
-plot(time2, sim_c_id, 'LineWidth', 2); hold on;
-plot(time, voltage_capacitor, 'LineWidth', 2); hold on;
-plot(time, voltage_resistor, 'LineWidth', 2); hold on;
-legend({'Identification', 'Real', 'Reference'},'FontSize', 20);
+% tau = R*C;
+% sim(model);
+% figure,
+% plot(time2, sim_c_id, 'LineWidth', 2); hold on;
+% plot(time, voltage_capacitor, 'LineWidth', 2); hold on;
+% plot(time, voltage_resistor, 'LineWidth', 2); hold on;
+% legend({'Identification', 'Real', 'Reference'},'FontSize', 20);
